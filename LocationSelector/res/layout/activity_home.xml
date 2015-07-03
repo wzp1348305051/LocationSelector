@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/rl_home_head"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/bg_head" >
+        
+        <TextView
+            android:id="@+id/tv_home_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+          	android:padding="10dp"
+          	android:gravity="center"
+            android:textColor="@color/bg_white"
+            android:textSize="16sp"
+            android:text="地图" />
+        
+    </RelativeLayout>
+      
+    <RelativeLayout
+        android:id="@+id/rl_home_map"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@+id/rl_home_head" >
+        
+        <ImageView
+            android:id="@+id/iv_home_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    	
+        <View
+            android:id="@+id/v_home_holder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+            
+        <ImageView
+            android:id="@+id/iv_home_current"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/v_home_holder"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_position" />
+
+        <TextView
+            android:id="@+id/tv_home_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:background="#E0CCCCCC"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#FFFFFFFF"
+            android:textSize="18sp" />
+            
+    </RelativeLayout>
+    
+</RelativeLayout>

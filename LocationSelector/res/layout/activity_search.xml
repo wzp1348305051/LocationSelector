@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/rl_search_head"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/bg_head" >
+        
+        <ImageView
+            android:id="@+id/iv_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/iv_back_bg" />
+        
+        <EditText
+            android:id="@+id/et_search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_search_back"
+            android:layout_toLeftOf="@+id/tv_search_ok"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/ic_search_white"
+            android:hint="搜索地点"
+            android:background="#00000000"
+            android:textColor="@color/bg_white"
+            android:textSize="18sp" >
+
+            <requestFocus />
+        </EditText>
+        
+        <TextView
+            android:id="@+id/tv_search_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+          	android:padding="10dp"
+          	android:gravity="center"
+            android:textColor="@color/bg_white"
+            android:textSize="16sp"
+            android:text="搜索" />
+        
+    </RelativeLayout>
+
+    <com.wzp.locationselector.view.XListView
+        android:id="@+id/lv_search_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_search_head"
+        android:cacheColorHint="#00000000"
+        android:divider="#FFF4F4F4"
+        android:focusable="true"
+        android:listSelector="#00000000" />
+    
+    <ProgressBar
+        android:id="@+id/pb_search_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
